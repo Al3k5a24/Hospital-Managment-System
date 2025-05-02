@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EditButtonForm">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="752.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="15.0" prefHeight="570.0" prefWidth="730.0" styleClass="dashboard_info" stylesheets="@DoctorMainForm.css">
+               <children>
+                  <Label layoutX="24.0" layoutY="25.0" text="Edit Patient">
+                     <font>
+                        <Font name="Bodoni MT" size="21.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-106.0" endY="33.0" layoutX="121.0" layoutY="22.0" startX="-106.0" startY="-1.0" stroke="#573394" strokeWidth="2.0" />
+                  <Label layoutX="58.0" layoutY="66.0" text="Patient ID:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="patientedit_number" layoutX="54.0" layoutY="296.0" prefHeight="32.0" prefWidth="350.0" promptText="Mobile number" />
+                  <Label layoutX="58.0" layoutY="141.0" text="Full name:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="patientedit_name" layoutX="54.0" layoutY="160.0" prefHeight="32.0" prefWidth="350.0" promptText="Full name" />
+                  <Label layoutX="56.0" layoutY="211.0" text="Patient's Gender">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="277.0" text="Mobile Number:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="patientedit_patientID" disable="true" layoutX="54.0" layoutY="85.0" prefHeight="25.0" prefWidth="350.0" promptText="ID" />
+                  <Label layoutX="54.0" layoutY="347.0" text="Address:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="patientedit_address" layoutX="54.0" layoutY="366.0" prefHeight="90.0" prefWidth="330.0" promptText="Address" styleClass="text-field" />
+                  <ComboBox fx:id="patientedit_gender" layoutX="54.0" layoutY="230.0" prefHeight="25.0" prefWidth="255.0" promptText="Choose..." />
+                  <ImageView fitHeight="217.0" fitWidth="232.0" layoutX="493.0" layoutY="258.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../slike/ikonice/edit.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="patientedit_confirm" layoutX="514.0" layoutY="90.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="51.0" prefWidth="175.0" styleClass="dashboard-button-onwhite" text="Confirm">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../slike/ikonice/checkbox.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Label layoutX="55.0" layoutY="472.0" text="Status">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="patientedit_status" layoutX="54.0" layoutY="494.0" prefHeight="25.0" prefWidth="255.0" promptText="Choose..." />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

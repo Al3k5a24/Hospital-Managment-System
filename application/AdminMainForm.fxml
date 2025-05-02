@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="700.0" maxWidth="1100.0" minHeight="700.0" minWidth="1100.0" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminFormController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0" stylesheets="@AdminMainForm.css">
+         <children>
+            <BorderPane layoutX="150.0" layoutY="107.0" maxHeight="600.0" maxWidth="1100.0" minHeight="600.0" minWidth="1100.0" prefHeight="600.0" prefWidth="1100.0" stylesheets="@AdminMainForm.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="40.0" prefWidth="903.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="-86.0" maxHeight="40.0" maxWidth="215.0" minHeight="40.0" minWidth="215.0" prefHeight="40.0" prefWidth="215.0" style="-fx-border-color: transparent;" styleClass="dashboard_title" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="25.0" layoutY="11.0" text="Hospital Managment System" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="216.0" layoutY="1.0" prefHeight="40.0" prefWidth="882.0" styleClass="navbar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="1.0">
+                           <children>
+                              <Label layoutX="823.0" layoutY="12.0" styleClass="user-info" text="Active" AnchorPane.rightAnchor="24.0" />
+                              <Circle fx:id="top_profile" fill="DODGERBLUE" layoutX="798.0" layoutY="21.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="71.0" />
+                              <Circle fill="#1fff52" layoutX="868.0" layoutY="14.0" radius="4.0" stroke="#04eb10" strokeType="INSIDE" strokeWidth="0.0" styleClass="status-indicator" AnchorPane.rightAnchor="10.0" />
+                              <Label fx:id="top_username" layoutX="581.0" layoutY="12.0" prefHeight="19.0" prefWidth="110.0" text="Aleksa22" AnchorPane.rightAnchor="191.0">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="515.0" layoutY="12.0" styleClass="user-info" text="Welcome," AnchorPane.rightAnchor="310.0" />
+                              <Label fx:id="current_form" layoutY="4.0" prefHeight="35.0" prefWidth="350.0" styleClass="sidebar-title" text="Dashboard Form">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="date_time" layoutX="407.0" layoutY="13.0" styleClass="user-info" text="MM:DD:YYYYY" AnchorPane.rightAnchor="391.0" />
+                              <Button fx:id="dashboard_logoutBTN" layoutX="691.0" layoutY="6.0" mnemonicParsing="false" onAction="#logoutBtn" styleClass="table-button" text="Log out" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="6.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="560.0" prefWidth="215.0" styleClass="background_dashboard" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="dashboard-logo">
+                           <image>
+                              <Image url="@../../slike/ikonice/Premium_Vector___Letter_S_Medical_Logo_Vector-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="nav_id" layoutX="79.0" layoutY="114.0" prefHeight="17.0" prefWidth="112.0" text="2" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="19.0" layoutY="115.0" text="Admin ID:" textFill="WHITE" />
+                        <Label fx:id="nav_username" layoutX="79.0" layoutY="133.0" prefHeight="17.0" prefWidth="112.0" text="Aleksa22" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="19.0" layoutY="134.0" text="Username:" textFill="WHITE" />
+                        <Line endX="75.0" layoutX="128.0" layoutY="170.0" startX="-114.0" stroke="WHITE" />
+                        <Label layoutX="19.0" layoutY="183.0" text="Feature" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="dashboard_btn" layoutX="14.0" layoutY="217.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="49.0" prefWidth="190.0" styleClass="dashboard-button" stylesheets="@AdminMainForm.css" text="Dashboard" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../slike/ikonice/dashboard.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="doctor_btn" layoutX="14.0" layoutY="277.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="190.0" styleClass="dashboard-button" text="Doctor" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../slike/ikonice/user-md.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="patient_btn" layoutX="14.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="190.0" styleClass="dashboard-button" text="Patient" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../slike/ikonice/user-injured.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="appointment_btn" layoutX="14.0" layoutY="395.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="190.0" styleClass="dashboard-button" text="Appointment" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../slike/ikonice/clipboard.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label layoutX="12.0" layoutY="524.0" text="Profile" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="profile_settings_btn" layoutX="15.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="190.0" styleClass="dashboard-button" text="Profile Settings" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../slike/ikonice/gears%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="payment_btn" layoutX="15.0" layoutY="455.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="190.0" styleClass="dashboard-button" text="Payment" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../slike/ikonice/wallet-arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_form" layoutX="116.0" layoutY="100.0" prefHeight="660.0" prefWidth="885.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="upper_pane" layoutX="13.0" layoutY="14.0" prefHeight="208.0" prefWidth="860.0" styleClass="dashboard_info" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="12.0">
+                                 <children>
+                                    <ScrollPane layoutX="3.0" layoutY="3.0" prefHeight="201.0" prefWidth="854.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="2.0">
+                                       <content>
+                                          <AnchorPane prefHeight="180.0" prefWidth="1080.0">
+                                             <children>
+                                                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="181.0" prefWidth="1080.0" styleClass="dashboard_info" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <children>
+                                                      <AnchorPane fx:id="dashboard_AD" layoutX="10.0" layoutY="25.0" maxHeight="131.0" maxWidth="220.0" minHeight="131.0" minWidth="220.0" prefHeight="131.0" prefWidth="220.0" styleClass="counter" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="25.0">
+                                                         <children>
+                                                            <ImageView fitHeight="89.0" fitWidth="89.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../slike/ikonice/pngtree-vector-doctor-icon-png-image_1028525-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label layoutX="120.0" layoutY="99.0" text="Active Doctors" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="dashboard_AD_count" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="104.0" layoutY="14.0" prefHeight="17.0" prefWidth="100.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane fx:id="dashboard_TP" layoutX="287.0" layoutY="25.0" prefHeight="131.0" prefWidth="220.0" styleClass="counter" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="26.0">
+                                                         <children>
+                                                            <ImageView fitHeight="89.0" fitWidth="89.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../slike/ikonice/pngtree-vector-doctor-icon-png-image_987481-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label layoutX="128.0" layoutY="102.0" text="Total Patients" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="dashboard_TP_count" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="106.0" layoutY="14.0" prefHeight="17.0" prefWidth="100.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane fx:id="dashboard_AP" layoutX="564.0" layoutY="25.0" prefHeight="131.0" prefWidth="220.0" styleClass="counter" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="26.0">
+                                                         <children>
+                                                            <ImageView fitHeight="89.0" fitWidth="89.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" styleClass="counter">
+                                                               <image>
+                                                                  <Image url="@../../slike/ikonice/pngtree-vector-doctor-icon-png-image_987481-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label layoutX="121.0" layoutY="102.0" text="Active Patients" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="dashboard_AP_count" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="106.0" layoutY="14.0" prefHeight="17.0" prefWidth="100.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane fx:id="dashboard_TA" layoutX="841.0" layoutY="25.0" prefHeight="131.0" prefWidth="220.0" styleClass="counter" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="26.0">
+                                                         <children>
+                                                            <ImageView fitHeight="106.0" fitWidth="89.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../slike/ikonice/Screenshot_1-removebg-preview.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <Label layoutX="93.0" layoutY="102.0" text="Total Appointments" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="dashboard_TA_count" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="106.0" layoutY="14.0" prefWidth="100.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="bottom_pane" layoutX="13.0" layoutY="228.0" prefHeight="403.0" prefWidth="860.0" styleClass="dashboard_info" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="237.0">
+                                 <children>
+                                    <AnchorPane fx:id="bottom_pane3" layoutX="406.0" layoutY="17.0" prefHeight="163.0" prefWidth="440.0" styleClass="dashboard_info" AnchorPane.bottomAnchor="221.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="17.0">
+                                       <children>
+                                          <AreaChart fx:id="dashboard_chart_PD" layoutY="-1.0" prefHeight="161.0" prefWidth="446.0" title="Patient's Data" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="bottom_pane2" layoutX="407.0" layoutY="203.0" prefHeight="188.0" prefWidth="440.0" styleClass="dashboard_info" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="404.0" AnchorPane.rightAnchor="15.0">
+                                       <children>
+                                          <BarChart fx:id="dashboard_chart_DD" layoutX="2.0" layoutY="4.0" prefHeight="180.0" prefWidth="438.0" title="Doctor's Data" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="5.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="bottom_pane1" layoutX="17.0" layoutY="16.0" prefHeight="367.0" prefWidth="380.0" styleClass="dashboard_info" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="18.0">
+                                       <children>
+                                          <TableView fx:id="dashboard_tableview" layoutX="13.0" layoutY="45.0" prefHeight="311.0" prefWidth="351.0" stylesheets="@AdminMainForm.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="37.0">
+                                             <columns>
+                                                <TableColumn fx:id="dashboard_col_docID" prefWidth="93.0" style="-fx-background-color: linear-gradient(to bottom, #0a0f1d, #003366, #004080, #002244);" text="Doctor ID" />
+                                                <TableColumn fx:id="dashboard_col_name" prefWidth="77.0" style="-fx-background-color: linear-gradient(to bottom, #0a0f1d, #003366, #004080, #002244);" text="Name" />
+                                                <TableColumn fx:id="dashboard_col_spec" prefWidth="89.0" style="-fx-background-color: linear-gradient(to bottom, #0a0f1d, #003366, #004080, #002244);" text="Specialized" />
+                                                <TableColumn fx:id="dashboard_col_status" prefWidth="94.0" style="-fx-background-color: linear-gradient(to bottom, #0a0f1d, #003366, #004080, #002244);" text="Status" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Doctor Information">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="doctors_form" layoutX="250.0" layoutY="160.0" prefHeight="660.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="doctor_table_pane" layoutX="10.0" layoutY="10.0" prefHeight="636.0" prefWidth="866.0" styleClass="dashboard_info" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label fx:id="doctor_table_label" layoutX="14.0" layoutY="15.0" prefHeight="35.0" prefWidth="88.0" styleClass="sidebar-title" text="Doctors">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="doctor_tableview" layoutX="12.0" layoutY="56.0" prefHeight="566.0" prefWidth="842.0" stylesheets="@AdminMainForm.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="56.0">
+                                      <columns>
+                                        <TableColumn fx:id="doctor_col_docID" prefWidth="75.0" text="Doctor ID">
+                                             <styleClass>
+                                                <String fx:value="label" />
+                                                <String fx:value="column-header-background" />
+                                             </styleClass></TableColumn>
+                                        <TableColumn fx:id="doctor_col_name" prefWidth="75.0" text="Name">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="doctor_col_gender" prefWidth="85.0" text="Gender">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="doctor_col_contact" prefWidth="138.0" text="Contact">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="doctor_col_email" prefWidth="103.0" text="Email">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="doctor_col_spec" prefWidth="86.0" text="Specialization">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="doctor_col_address" prefWidth="103.0" text="Address">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="doctor_col_status" prefWidth="85.0" text="Status">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="doctor_col_action" prefWidth="101.0" text="Action">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Line fx:id="doctor_table_line" endX="-106.0" endY="33.0" layoutX="120.0" layoutY="16.0" startX="-106.0" startY="-1.0" stroke="#316ed7" strokeWidth="2.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Patient_form" prefHeight="658.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="patient_table_pane" layoutX="10.0" layoutY="19.0" prefHeight="620.0" prefWidth="866.0" styleClass="dashboard_info" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="19.0">
+                                 <children>
+                                    <Label fx:id="patient_table_label" layoutX="15.0" layoutY="15.0" prefHeight="35.0" prefWidth="88.0" styleClass="sidebar-title" text="Patients">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="patient_tableview" layoutX="12.0" layoutY="56.0" prefHeight="566.0" prefWidth="842.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="56.0">
+                                       <columns>
+                                          <TableColumn fx:id="patient_col_patientID" prefWidth="75.0" text="Patient ID">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_name" prefWidth="75.0" text="Name">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_gender" prefWidth="72.0" text="Gender">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_contact" prefWidth="123.0" text="Contact Number">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_description" prefWidth="101.0" text="Description">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_date" prefWidth="65.0" text="Date">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_datemodify" prefWidth="94.0" text="Date modify">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_datedelete" prefWidth="85.0" text="Date Delete">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_status" minWidth="0.0" prefWidth="81.0" text="Status">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                          <TableColumn fx:id="patient_col_actieon" minWidth="0.0" prefWidth="70.0" text="Action">
+                                             <styleClass>
+                                                <String fx:value="column-header-background" />
+                                                <String fx:value="label" />
+                                             </styleClass></TableColumn>
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Line fx:id="patient_table_line" endX="-106.0" endY="33.0" layoutX="120.0" layoutY="16.0" startX="-106.0" startY="-1.0" stroke="#316ed7" strokeWidth="2.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Appointment_form" prefHeight="658.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="appointment_table_pane" layoutX="13.0" layoutY="11.0" prefHeight="635.0" prefWidth="859.0" styleClass="dashboard_info" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="11.0" />
+                              <Label fx:id="appointment_table_label" layoutX="25.0" layoutY="25.0" prefHeight="35.0" prefWidth="128.0" styleClass="sidebar-title" text="Appointments">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="appointment_tableview" layoutX="22.0" layoutY="66.0" prefHeight="566.0" prefWidth="842.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="66.0">
+                                 <columns>
+                                    <TableColumn fx:id="appointment_col_id" prefWidth="109.0" text="Appointment ID">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_name" prefWidth="75.0" text="Name">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_gender" prefWidth="77.0" text="Gender">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_contact" prefWidth="82.0" text="Contact">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_description" prefWidth="101.0" text="Description">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_date" prefWidth="65.0" text="Date">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_datemodify" prefWidth="94.0" text="Date modify">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_datedelete" prefWidth="85.0" text="Date Delete">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_status" minWidth="0.0" prefWidth="81.0" text="Status">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                    <TableColumn fx:id="appointment_col_action" minWidth="0.0" prefWidth="70.0" text="Action">
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="label" />
+                                       </styleClass>
+                                    </TableColumn>
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Line fx:id="appointment_table_line" endX="-106.0" endY="33.0" layoutX="130.0" layoutY="26.0" startX="-106.0" startY="-1.0" stroke="#316ed7" strokeWidth="2.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="profilesettings_form" layoutX="76.0" layoutY="56.0" prefHeight="658.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="settings_profile_pane" layoutX="14.0" layoutY="14.0" prefHeight="630.0" prefWidth="310.0" styleClass="dashboard_info" stylesheets="@AdminMainForm.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <children>
+                                    <Circle fx:id="adminEdit_profilePicture" layoutX="155.0" layoutY="130.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Button fx:id="adminEdit_ImportPicture" layoutX="90.0" layoutY="249.0" mnemonicParsing="false" onAction="#profileChangeProfile" prefHeight="45.0" prefWidth="130.0" styleClass="dashboard-button-onwhite" stylesheets="@AdminMainForm.css" text="Import" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="89.0" />
+                                    <Label fx:id="settings_profile_ID" layoutX="53.0" layoutY="361.0" text="Admin ID:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="adminEdit_label_adminID" layoutX="131.0" layoutY="361.0" prefHeight="21.0" prefWidth="165.0" text="Admin ID">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="settings_profile_email" layoutX="24.0" layoutY="394.0" text="Email address:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="adminEdit_label_email" layoutX="131.0" layoutY="394.0" prefHeight="21.0" prefWidth="170.0" text="Admin Email Address">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="settings_profile_name" layoutX="45.0" layoutY="428.0" prefHeight="21.0" prefWidth="73.0" text="Full Name:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="adminEdit_label_fullname" layoutX="131.0" layoutY="428.0" prefHeight="21.0" prefWidth="165.0" text="Admin full name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="settings_profile_date" layoutX="30.0" layoutY="461.0" text="Date created:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="adminEdit_label_datecreated" layoutX="131.0" layoutY="461.0" prefHeight="21.0" prefWidth="165.0" text="Admin date">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="edit_pane" layoutX="341.0" layoutY="14.0" prefHeight="630.0" prefWidth="530.0" styleClass="dashboard_info" stylesheets="@AdminMainForm.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="341.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <children>
+                                    <Label fx:id="edit_label" layoutX="33.0" layoutY="14.0" prefHeight="35.0" prefWidth="106.0" text="Edit Profile">
+                                       <font>
+                                          <Font name="Arial" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="edit_picture2" blendMode="SRC_ATOP" fitHeight="219.0" fitWidth="222.0" layoutX="297.0" layoutY="389.0" opacity="0.2" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="13.0">
+                                       <image>
+                                          <Image url="@../../slike/ikonice/gears.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="edit_picture1" fitHeight="25.0" fitWidth="25.0" layoutX="139.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../slike/ikonice/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Line fx:id="edit_line" endX="-106.0" endY="33.0" layoutX="129.0" layoutY="16.0" startX="-106.0" startY="-1.0" stroke="#316ed7" strokeWidth="2.0" />
+                                    <Label fx:id="edit_ID" layoutX="87.0" layoutY="120.0" text="Admin ID">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="edit_email" layoutX="59.0" layoutY="348.0" text="Email address">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="edit_fullname" layoutX="86.0" layoutY="234.0" text="Full Name">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="edit_username" layoutX="84.0" layoutY="177.0" text="Username">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="edit_status" layoutX="106.0" layoutY="405.0" text="Status">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="adminEdit_adminID" disable="true" layoutX="164.0" layoutY="115.0" prefHeight="32.0" prefWidth="220.0" promptText="Admin ID" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="146.0" />
+                                    <TextField fx:id="adminEdit_Username" layoutX="164.0" layoutY="172.0" prefHeight="32.0" prefWidth="290.0" promptText="Username" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="147.0" />
+                                    <TextField fx:id="adminEdit_fullname" layoutX="164.0" layoutY="229.0" prefHeight="32.0" prefWidth="290.0" promptText="Full Name" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="147.0" />
+                                    <TextField fx:id="adminEdit_email" layoutX="164.0" layoutY="343.0" prefHeight="32.0" prefWidth="290.0" promptText="Email address" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="75.0" />
+                                    <ComboBox fx:id="adminEdit_status" layoutX="168.0" layoutY="401.0" prefHeight="30.0" prefWidth="150.0" promptText="Choose...." styleClass="arrow" stylesheets="@AdminMainForm.css" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="213.0" />
+                                    <Button fx:id="adminEdit_update" layoutX="187.0" layoutY="553.0" mnemonicParsing="false" onAction="#updateDataAdmin" prefHeight="55.0" prefWidth="155.0" styleClass="dashboard-button-onwhite" stylesheets="@AdminMainForm.css" text="Update" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="187.0" />
+                                    <Label fx:id="edit_gender" layoutX="104.0" layoutY="291.0" text="Gender">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="adminEdit_gender" layoutX="167.0" layoutY="288.0" prefHeight="28.0" prefWidth="150.0" promptText="Choose...." styleClass="arrow" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="214.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="payment_form" layoutX="14.0" layoutY="14.0" prefHeight="658.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="payment_table_pane" layoutX="14.0" layoutY="14.0" prefHeight="630.0" prefWidth="530.0" styleClass="dashboard_info" stylesheets="@AdminMainForm.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="341.0" AnchorPane.topAnchor="14.0">
+                                 <children>
+                                    <Line fx:id="payment_table_line" endX="-106.0" endY="33.0" layoutX="120.0" layoutY="16.0" startX="-106.0" startY="-1.0" stroke="#316ed7" strokeWidth="2.0" />
+                                    <Label fx:id="payment_table_label" layoutX="22.0" layoutY="15.0" prefHeight="35.0" prefWidth="106.0" text="Patients">
+                                       <font>
+                                          <Font name="Arial" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="payment_tableview" layoutX="15.0" layoutY="56.0" onMouseClicked="#paymentSelect" prefHeight="560.0" prefWidth="500.0" stylesheets="@AdminMainForm.css" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="56.0">
+                                      <columns>
+                                        <TableColumn fx:id="payment_col_patID" prefWidth="75.0" text="Patient ID">
+                                             <styleClass>
+                                                <String fx:value="label" />
+                                                <String fx:value="column-header-background" />
+                                             </styleClass>
+                                          </TableColumn>
+                                        <TableColumn fx:id="payment_col_name" prefWidth="75.0" text="Name">
+                                             <styleClass>
+                                                <String fx:value="label" />
+                                                <String fx:value="column-header-background" />
+                                             </styleClass>
+                                          </TableColumn>
+                                          <TableColumn fx:id="payment_col_Gender" prefWidth="75.0" text="Gender">
+                                             <styleClass>
+                                                <String fx:value="label" />
+                                                <String fx:value="column-header-background" />
+                                             </styleClass>
+                                          </TableColumn>
+                                          <TableColumn fx:id="payment_col_diagnosis" prefWidth="75.0" text="Diagnosis">
+                                             <styleClass>
+                                                <String fx:value="label" />
+                                                <String fx:value="column-header-background" />
+                                             </styleClass>
+                                          </TableColumn>
+                                          <TableColumn fx:id="payment_col_doctor" prefWidth="75.0" text="Doctor">
+                                             <styleClass>
+                                                <String fx:value="label" />
+                                                <String fx:value="column-header-background" />
+                                             </styleClass>
+                                          </TableColumn>
+                                          <TableColumn fx:id="payment_col_date" prefWidth="75.0" text="Date">
+                                             <styleClass>
+                                                <String fx:value="label" />
+                                                <String fx:value="column-header-background" />
+                                             </styleClass>
+                                          </TableColumn>
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="payment_profile_pane" layoutX="561.0" layoutY="14.0" prefHeight="630.0" prefWidth="310.0" styleClass="dashboard_info" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <children>
+                                    <Circle fx:id="payment_patientpicture" layoutX="155.0" layoutY="137.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Label fx:id="payment_profile_ID" layoutX="54.0" layoutY="275.0" text="Patient ID:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="payment_label_patID" layoutX="138.0" layoutY="275.0" prefHeight="21.0" prefWidth="140.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="31.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="payment_profile_name" layoutX="53.0" layoutY="308.0" text="Full Name:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="payment_label_fullname" layoutX="138.0" layoutY="308.0" prefHeight="21.0" prefWidth="140.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="31.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="payment_profile_doctor" layoutX="73.0" layoutY="342.0" prefHeight="21.0" prefWidth="50.0" text="Doctor:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="payment_label_doctor" layoutX="138.0" layoutY="342.0" prefHeight="21.0" prefWidth="145.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="31.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="payment_profile_date" layoutX="89.0" layoutY="375.0" text="Date:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="payment_label_date" layoutX="138.0" layoutY="375.0" prefHeight="21.0" prefWidth="145.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="31.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="payment_checkout" layoutX="80.0" layoutY="567.0" mnemonicParsing="false" onAction="#checkoutBtn" prefHeight="42.0" prefWidth="151.0" styleClass="dashboard-button-onwhite" text="Check-out" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="79.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

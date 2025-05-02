@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="edit_doctor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DoctorEitForm">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="775.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="11.0" prefHeight="679.0" prefWidth="758.0" styleClass="dashboard_info" stylesheets="@AdminMainForm.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="11.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="25.0" text="Edit Doctor">
+                     <font>
+                        <Font name="Bodoni MT" size="21.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-106.0" endY="33.0" layoutX="121.0" layoutY="22.0" startX="-106.0" startY="-1.0" stroke="#316ed7" strokeWidth="2.0" />
+                  <Label layoutX="40.0" layoutY="315.0" text="Doctor ID:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="doctoredit_number" layoutX="36.0" layoutY="520.0" prefHeight="32.0" prefWidth="350.0" promptText="Mobile number" />
+                  <Label layoutX="40.0" layoutY="378.0" text="Doctor's Name:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="doctoredit_doctorName" layoutX="36.0" layoutY="397.0" prefHeight="32.0" prefWidth="350.0" promptText="Full name" />
+                  <Label layoutX="38.0" layoutY="441.0" text="Doctor's Gender">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="38.0" layoutY="501.0" text="Mobile Number:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="doctoredit_doctorID" layoutX="36.0" layoutY="334.0" prefHeight="25.0" prefWidth="350.0" promptText="Doctor ID" />
+                  <Label layoutX="407.0" layoutY="380.0" text="Address:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="doctoredit_address" layoutX="407.0" layoutY="399.0" prefHeight="90.0" prefWidth="330.0" promptText="Address" styleClass="text-field" />
+                  <ComboBox fx:id="doctoredit_gender" layoutX="36.0" layoutY="460.0" prefHeight="25.0" prefWidth="255.0" promptText="Choose..." />
+                  <Button fx:id="doctoredit_confirm" layoutX="432.0" layoutY="589.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="51.0" prefWidth="130.0" styleClass="dashboard-button-onwhite" text="Confirm" />
+                  <Label layoutX="408.0" layoutY="505.0" text="Status">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="doctoredit_status" layoutX="407.0" layoutY="527.0" prefHeight="25.0" prefWidth="255.0" promptText="Choose..." />
+                  <TextField fx:id="doctoredit_email" layoutX="36.0" layoutY="587.0" prefHeight="32.0" prefWidth="350.0" promptText="Email address" />
+                  <Label layoutX="38.0" layoutY="568.0" text="Email Address:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="409.0" layoutY="327.0" text="Specialization">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="doctoredit_specialization" layoutX="407.0" layoutY="346.0" prefHeight="25.0" prefWidth="255.0" promptText="Choose..." />
+                  <Circle fx:id="editdoctor_picture" layoutX="379.0" layoutY="138.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Button fx:id="doctoredit_importpicture" layoutX="292.0" layoutY="254.0" mnemonicParsing="false" onAction="#profileChangeProfile" prefHeight="51.0" prefWidth="175.0" styleClass="dashboard-button-onwhite" text="Import Picture" />
+                  <Button fx:id="doctoredit_cancel" layoutX="593.0" layoutY="589.0" mnemonicParsing="false" onAction="#cancelBtn" prefHeight="51.0" prefWidth="130.0" styleClass="dashboard-button-onwhite" text="Cancel" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

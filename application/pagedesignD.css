@@ -1,0 +1,120 @@
+
+/* Stakleni panel forme */
+.login-panel {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 0, 5);
+}
+
+/* Polja za unos */
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: linear-gradient(to right, #920ae8, #7c0be5);
+    -fx-text-fill: white;
+}
+
+/* Dugme za prijavu */
+.button-login {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 10px 30px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
+}
+
+.button-login:hover {
+    -fx-background-color: linear-gradient(to right, #8324d7, #47199e);
+    -fx-text-fill: black;
+}
+
+.button-login:pressed {
+    -fx-background-color: #7b0bd6;
+    -fx-text-fill: white;
+}
+
+/* Stil za "Show Password" */
+.check-label {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+.combo-box {
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to right, #9e14db, #3d0f94);
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.combo-box .text-field {
+    -fx-text-fill: white;
+}
+
+.combo-box:focused .text-field {
+    -fx-text-fill: white;
+}
+
+/* Prilikom fokusa (kada je ComboBox kliknut) */
+.combo-box:focused {
+    -fx-border-color: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
+/* Strelica ComboBox-a */
+.combo-box .arrow {
+    -fx-background-color: transparent;
+    -fx-shape: "M 0 0 L 4 4 L 8 0 Z"; /* Trouglasta strelica */
+    -fx-padding: 4px;
+    -fx-fill: white;
+}
+
+/* Popup lista ComboBox-a */
+.combo-box-popup .list-view {
+    -fx-background-color: rgba(10, 10, 10, 0.9);
+    -fx-border-color: #0072ff;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-padding: 4px;
+}
+
+/* Stavke u listi ComboBox-a */
+.combo-box-popup .list-cell {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(0, 140, 255, 0.4);
+}
+
+/*promena boje teksta u polju*/
+.combo-box .list-cell {
+  -fx-text-fill: white;
+}
+
+.background_adminlog{
+	-fx-background-image:url('../pozadinskeslike/doctor.jpg');
+	-fx-background-size:cover;
+}
+
+.admin_icon{
+	-fx-background-color:linear-gradient(to bottom right,#1652c9,#3790d0);
+}
