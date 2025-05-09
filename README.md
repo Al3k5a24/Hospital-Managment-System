@@ -1,7 +1,7 @@
-🏥 ##Hospital Management System
+🏥 ## Hospital Management System
 Hospital Management System is a comprehensive desktop application tailored to streamline hospital operations. It offers an intuitive interface and robust backend support for managing patients, doctors, appointments, and medical records efficiently.
 
-###Why Hospital Management System?
+### Why Hospital Management System?
 This project was created to reduce the complexity of hospital administration while improving workflow and patient care. The core features include:
 
 🧩 Streamlined Build Process: Easy setup and deployment using Java Swing with minimal configuration overhead.
