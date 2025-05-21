@@ -1,6 +1,5 @@
 <div style="display: flex; align-items: center; justify-content: center; margin-top: 40px;">
-  <img src="putanja/do/slike.png" alt="Ikonica" style="width: 50px; height: 50px; margin-right: 15px;">
-  <h1 style="font-size: 36px; margin: 0;">Tvoj Naslov</h1>
+  <img src="Premium_Vector___Letter_S_Medical_Logo_Vector-removebg-preview.png" alt="Ikonica" style="width: 50px; height: 50px; margin-right: 15px;">  <h1 style="font-size: 36px; margin: 0;">Hospital Managment System</h1>
 </div>
 
 
