@@ -1,6 +1,6 @@
 # 🏥 Hospital Management System
 
-A full-featured Java-based Hospital Management System that helps clinics and hospitals manage patients, doctors, and appointments with ease. The application is built using **Java**, **JavaFX**, **Spring Boot**, and **MySQL** with support for user authentication, CRUD operations, and role-based access.
+A full-featured Java-based Hospital Management System that helps clinics and hospitals manage patients, doctors, and appointments with ease. The application is built using **Java**, **JavaFX**, and **MySQL** with support for user authentication, CRUD operations, and role-based access.
 
 ---
 
