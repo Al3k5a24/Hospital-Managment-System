@@ -29,7 +29,7 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 *(Add screenshots here when available)*  
 Example:  
@@ -37,7 +37,7 @@ Example:
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - **Java 17+**
 - **JavaFX**
@@ -49,7 +49,7 @@ Example:
 
 ---
 
-## 📥 Installation
+## Installation
 
 ```bash
 # Clone the repository
