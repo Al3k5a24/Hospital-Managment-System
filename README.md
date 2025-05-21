@@ -1,4 +1,8 @@
-# 🏥 Hospital Management System
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 40px;">
+  <img src="putanja/do/slike.png" alt="Ikonica" style="width: 50px; height: 50px; margin-right: 15px;">
+  <h1 style="font-size: 36px; margin: 0;">Tvoj Naslov</h1>
+</div>
+
 
 A full-featured Java-based Hospital Management System that helps clinics and hospitals manage patients, doctors, and appointments with ease. The application is built using **Java**, **JavaFX**, and **MySQL** with support for user authentication, CRUD operations, and role-based access.
 
