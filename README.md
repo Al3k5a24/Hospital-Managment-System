@@ -1,6 +1,4 @@
-<div align-items:"center">
-  <img src="Premium_Vector___Letter_S_Medical_Logo_Vector-removebg-preview.png" alt="Ikonica" style="width: 50px; height: 50px; margin-right: 15px;">  <h1 style="font-size: 36px; margin: 0;">Hospital Managment System</h1>
-</div>
+<h1 style="font-size: 36px; text-align: center; margin: 0;">Hospital Managment System</h1>
 
 
 A full-featured Java-based Hospital Management System that helps clinics and hospitals manage patients, doctors, and appointments with ease. The application is built using **Java**, **JavaFX**, and **MySQL** with support for user authentication, CRUD operations, and role-based access.
