@@ -10,7 +10,6 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
 - [Screenshots](#screenshots)
 - [Tech Stack](#tech-stack)
 - [Usage](#usage)
-- [Database Schema](#database-schema)
 - [License](#license)
 - [About Me](#about-me)
 - [Installation](#installation)
@@ -40,7 +39,6 @@ Example:
 
 - **Java 17+**
 - **JavaFX**
-- **Spring Boot**
 - **MySQL**
 - **SceneBuilder** (for UI)
 - **JasperReports** (for report generation)
@@ -53,17 +51,6 @@ Example:
 - Login with credentials (admin/doctor)
 - Navigate through dashboard to manage doctors, patients, and appointments
 - Use the print button to generate reports via JasperReports
-
-## Database Schema
-
-The app uses multiple tables including:
-
-- `doctor`
-- `patient`
-- `appointment`
-- `users`
-
-You can import the `hospital_db.sql` file provided in the `/sql` directory to quickly set up the database.
 
 ## License
 
