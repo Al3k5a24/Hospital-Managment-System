@@ -17,7 +17,7 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
 
 ---
 
-## ✅ Features
+## Features ✅ 
 
 - 👨‍⚕️ Doctor and Patient Management (Add, Edit, Delete)
 - 📅 Appointment Scheduling
