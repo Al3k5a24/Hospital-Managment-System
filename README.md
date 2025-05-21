@@ -9,12 +9,11 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
 - [Features](#Features)
 - [Screenshots](#screenshots)
 - [Tech Stack](#tech-stack)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Database Schema](#database-schema)
 - [License](#license)
 - [About Me](#about-me)
-
+- [Installation](#installation)
 ---
 
 ## Features
@@ -49,6 +48,35 @@ Example:
 
 ---
 
+## Usage
+
+- Login with credentials (admin/doctor)
+- Navigate through dashboard to manage doctors, patients, and appointments
+- Use the print button to generate reports via JasperReports
+
+## Database Schema
+
+The app uses multiple tables including:
+
+- `doctor`
+- `patient`
+- `appointment`
+- `users`
+
+You can import the `hospital_db.sql` file provided in the `/sql` directory to quickly set up the database.
+
+## License
+
+This project is open-source and available under the MIT License.
+
+## About Me
+
+I'm a Computer and Software Engineering student from Serbia, currently focused on building my portfolio and growing as a backend developer.
+
+I'm passionate about software architecture, clean code, and scalable system design. I enjoy working with technologies like Java, Spring Boot, MySQL, and RESTful APIs. I'm also comfortable with Git for version control, and I constantly aim to improve my understanding of algorithms and system design patterns.
+
+Beyond tech, I’m a person with wide interests, always open to meeting new people and building meaningful connections — both in tech and beyond.
+
 ## Installation
 
 ```bash
@@ -67,4 +95,3 @@ cd hospital-management-system
 
 # Build and run the app
 mvn clean install
-
