@@ -45,8 +45,8 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
   <img src="images/Doctor/doctor_dashboard.png" width="500"/>
   <img src="images/Doctor/doctor_editPatientTable.png" width="500"/>
   <img src="images/Doctor/doctor_app.png" width="500"/>
-  <img src="images/Doctor/admin_editProfile.png" width="500"/>
-  <img src="images/Doctor/admin_patients.png" width="500"/>
+  <img src="images/Doctor/doctor_editProfile.png" width="500"/>
+  <img src="images/Doctor/doctor_patients.png" width="500"/>
 </p>
 
 ---
