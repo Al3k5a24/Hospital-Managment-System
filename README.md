@@ -49,7 +49,7 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
   <img src="images/Doctor/doctor_patients.png" width="500"/>
 </p>
 
-<h2 align="center">📸 All screenshots are available at: <a href="[https://your-link-here.com](https://github.com/Al3k5a24/Hospital-Managment-System/tree/main/images)">Link</a></h2>
+<h2 align="center">📸 All screenshots are available at: <a href="https://github.com/Al3k5a24/Hospital-Managment-System/tree/main/images">Images</a></h2>
 
 
 ---
