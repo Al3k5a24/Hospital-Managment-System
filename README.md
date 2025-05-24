@@ -34,7 +34,7 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
 <p align="center">
   <img src="images/Admin/admin_login.png" width="200"/>
   <img src="images/Admin/admin_register.png" width="200"/>
-  <img src="images/Admin/admin_dashboard.png" width="200"/>
+  <img src="images/Admin/admin_dashboard.png"/>
 </p>
 
 
