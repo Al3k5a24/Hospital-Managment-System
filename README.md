@@ -32,8 +32,6 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
 
 ### Admin
 <p align="center">
-  <img src="images/Admin/admin_login.png" width="200"/>
-  <img src="images/Admin/admin_register.png" width="200"/>
   <img src="images/Admin/admin_dashboard.png" width="500"/>
   <img src="images/Admin/admin_doctors.png" width="500"/>
   <img src="images/Admin/admin_patients.png" width="500"/>
@@ -42,6 +40,14 @@ A full-featured Java-based Hospital Management System that helps clinics and hos
   <img src="images/Admin/admin_profile.png" width="500"/>
 </p>
 
+### Doctor
+<p align="center">
+  <img src="images/Doctor/doctor_dashboard.png" width="500"/>
+  <img src="images/Doctor/doctor_editPatientTable.png" width="500"/>
+  <img src="images/Doctor/doctor_app.png" width="500"/>
+  <img src="images/Doctor/admin_editProfile.png" width="500"/>
+  <img src="images/Doctor/admin_patients.png" width="500"/>
+</p>
 
 ---
 
